@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suivi allergies</title>
+<link rel="stylesheet" href="style.css">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Suivi allergies</h1>
+    <nav><a href="historique.html">Historique</a> · <a href="dashboard.html">Résumé</a></nav>
+  </header>
+
+  <form id="signal-form">
+    <div class="field-group">
+      <label>Niveau</label>
+      <div class="segmented niveau-group" id="niveau-group">
+        <button type="button" data-value="faible">Faible</button>
+        <button type="button" data-value="moyen">Moyen</button>
+        <button type="button" data-value="élevé">Élevé</button>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Environnement</label>
+      <div class="segmented env-group" id="env-group">
+        <button type="button" data-value="intérieur">Intérieur</button>
+        <button type="button" data-value="extérieur">Extérieur</button>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="commentaire">Commentaire (facultatif)</label>
+      <textarea id="commentaire" placeholder="Contexte, symptômes…"></textarea>
+    </div>
+
+    <button type="submit" id="submit-btn">Enregistrer</button>
+  </form>
+
+  <p class="status" id="status"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

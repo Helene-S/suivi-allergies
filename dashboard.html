@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Résumé – Suivi allergies</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Résumé</h1>
+    <nav><a href="index.html">Accueil</a> · <a href="historique.html">Historique</a></nav>
+  </header>
+
+  <section>
+    <h2>Carte des signalements</h2>
+    <div id="map"></div>
+    <div class="legend">
+      <span><span class="dot" style="background:#8FA68A"></span>Faible</span>
+      <span><span class="dot" style="background:#C49A4A"></span>Moyen</span>
+      <span><span class="dot" style="background:#BE5A3E"></span>Élevé</span>
+      <span class="legend-sep"></span>
+      <span><span class="dot dot-solid"></span>Extérieur</span>
+      <span><span class="dot dot-soft"></span>Intérieur</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Facteurs communs</h2>
+    <div id="facteurs"><p class="loading">Chargement…</p></div>
+  </section>
+
+  <section>
+    <h2>Répartition des variables</h2>
+    <div id="charts"></div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="config.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
